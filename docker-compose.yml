@@ -15,7 +15,7 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
 
   prisma-studio:
-    build: server
+    build: server-express
     command: npx prisma studio --port 5555
     ports:
       - "5555:5555"
@@ -30,11 +30,11 @@ services:
       postgres:
         condition: service_healthy
     build:
-      context: server
+      context: server-express
       target: dev
     volumes:
-      - ./server/src:/app/src
-      - ./server/prisma:/app/prisma
+      - ./server-express/src:/app/src
+      - ./server-express/prisma:/app/prisma
     command: "npm run dev"
     ports:
       - "8080:8080"

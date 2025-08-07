@@ -2771,7 +2771,7 @@ declare enum SpanKind {
     /** Default value. Indicates that the span is used internally. */
     INTERNAL = 0,
     /**
-     * Indicates that the span covers server-side handling of an RPC or other
+     * Indicates that the span covers server-express-side handling of an RPC or other
      * remote request.
      */
     SERVER = 1,
@@ -2782,13 +2782,13 @@ declare enum SpanKind {
     CLIENT = 2,
     /**
      * Indicates that the span describes producer sending a message to a
-     * broker. Unlike client and server, there is no direct critical path latency
+     * broker. Unlike client and server-express, there is no direct critical path latency
      * relationship between producer and consumer spans.
      */
     PRODUCER = 3,
     /**
      * Indicates that the span describes consumer receiving a message from a
-     * broker. Unlike client and server, there is no direct critical path latency
+     * broker. Unlike client and server-express, there is no direct critical path latency
      * relationship between producer and consumer spans.
      */
     CONSUMER = 4
