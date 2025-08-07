@@ -5,7 +5,7 @@ import {
     type AppRes,
 } from '../common/types/Request.type';
 import { StatusCodes } from 'http-status-codes';
-import logger from '../config/logger';
+import {logger} from '../config/logger';
 export const errorHandler =
     () => (error: AppErr, _req: AppReq, res: AppRes, _next: AppNext) => {
         logger.error('Express error handler', error);

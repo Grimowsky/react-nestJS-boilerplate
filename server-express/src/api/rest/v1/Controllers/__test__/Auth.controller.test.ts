@@ -1,5 +1,5 @@
 import httpMocks from 'node-mocks-http';
-import logger from '../../../../../config/logger';
+import {logger} from '../../../../../config/logger';
 import { login, refreshToken } from '../Auth.controller';
 import AuthService from '@services/Auth/Auth.service';
 

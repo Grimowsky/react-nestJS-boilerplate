@@ -10,7 +10,7 @@ import * as bcrypt from 'bcrypt';
 import JwtMiddleware from '../../middleware/jwtMiddleware';
 import prisma from '../../prismaClient';
 import { type Role } from '../../common/types/roles.type';
-import logger from '../../config/logger';
+import {logger} from '../../config/logger';
 const login = async ({
     username,
     password,

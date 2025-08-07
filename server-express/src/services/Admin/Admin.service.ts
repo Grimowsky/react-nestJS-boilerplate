@@ -1,6 +1,6 @@
 import { type User, type SelectedUser } from '@services/Admin/User.type';
 import prisma from '../../prismaClient';
-import logger from '../../config/logger';
+import {logger} from '../../config/logger';
 
 const getAllUsers = async (): Promise<User[]> => {
     logger.info('Admin.service: getAllUsers called');

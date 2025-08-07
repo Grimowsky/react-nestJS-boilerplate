@@ -1,6 +1,6 @@
 import httpMocks from 'node-mocks-http';
 import { errorHandler } from '../errorHandler';
-import logger from '../../config/logger';
+import {logger} from '../../config/logger';
 import { type AppErr } from '../../common/types/Request.type';
 
 describe('errorHandler', () => {

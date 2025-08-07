@@ -1,5 +1,5 @@
 import httpMocks from 'node-mocks-http';
-import logger from '../../../../../config/logger';
+import {logger} from '../../../../../config/logger';
 import AdminService from '@services/Admin/Admin.service';
 import { usersList } from '../Admin.controller';
 

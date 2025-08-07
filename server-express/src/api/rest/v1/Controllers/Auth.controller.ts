@@ -4,7 +4,7 @@ import {
 } from '../../../../common/types/Request.type';
 import { type LoginReq, type RefreshTokenReq } from '@services/Auth/Auth.type';
 import AuthService from '@services/Auth/Auth.service';
-import logger from '../../../../config/logger';
+import {logger} from '../../../../config/logger';
 
 const login = async (loginData: AppReq, res: AppRes): Promise<void> => {
     logger.info('Auth.controller: login request starts');

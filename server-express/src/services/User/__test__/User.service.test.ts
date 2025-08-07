@@ -1,6 +1,6 @@
 import userService from '@services/User/User.service';
 import { prismaMock } from '../../../utils/tests/prisma';
-import logger from '../../../config/logger';
+import {logger} from '../../../config/logger';
 import { type User } from '@services/User/User.type';
 import { type ExtendedError } from '../../../utils/error/error';
 

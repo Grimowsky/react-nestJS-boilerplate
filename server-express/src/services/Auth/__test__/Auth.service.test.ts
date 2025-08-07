@@ -1,6 +1,6 @@
 import authService from '@services/Auth/Auth.service';
 import { prismaMock } from '../../../utils/tests/prisma';
-import logger from '../../../config/logger';
+import {logger} from '../../../config/logger';
 import type { ExtendedError } from '../../../utils/error/error';
 import jwtMiddleware from '../../../middleware/jwtMiddleware';
 import type { RefreshTokenReq } from '@services/Auth/Auth.type';

@@ -1,6 +1,6 @@
 import * as http from 'http';
-import { app } from './app';
-import logger from './config/logger';
+import {logger} from './config/logger';
+import {app} from "./app";
 
 const PORT = process?.env?.PORT || 8080;
 

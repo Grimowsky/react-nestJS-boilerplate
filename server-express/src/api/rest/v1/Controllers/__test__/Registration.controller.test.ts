@@ -1,6 +1,7 @@
 import RegistrationController from '@controllers/Registration.controller';
 import UserService from '@services/User/User.service';
-import logger from '../../../../../config/logger';
+import {logger} from '../../../../../config/logger';
+
 import httpMocks from 'node-mocks-http';
 import { type User } from '@services/User/User.type';
 

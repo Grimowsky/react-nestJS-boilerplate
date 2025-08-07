@@ -7,7 +7,7 @@ services:
       - "5432:5432"
     restart: always
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       timeout: 2s
       retries: 5
@@ -15,7 +15,8 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
 
   prisma-studio:
-    build: server-express
+    build:
+      context: server-express
     command: npx prisma studio --port 5555
     ports:
       - "5555:5555"
@@ -43,15 +44,15 @@ services:
       - DATABASE_URL=postgresql://postgres:@postgres:5432/postgres?schema=public&connect_timeout=3000
       - JWT_SECRET=82BE286AE0014A5E7476F17C3E37A06FE366CDC8EDA3E66BFF7265F9320AA294
 
-  frontend:
-    build:
-      context: client
-      target: dev
-    volumes:
-      - ./client/src:/app/src
-    command: "npm run dev"
-    ports:
-      - "3000:3000"
-    environment:
-      - PORT="3000"
-      - VITE_API_URL=http://localhost:8080
+  #frontend:
+  #  build:
+  #    context: client
+  #    target: dev
+  #  volumes:
+  #    - ./client/src:/app/src
+  #  command: "npm run dev"
+  #  ports:
+  #    - "3000:3000"
+  #  environment:
+  #    - PORT="3000"
+  #    - VITE_API_URL=http://localhost:8080

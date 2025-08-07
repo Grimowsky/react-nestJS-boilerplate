@@ -3,7 +3,7 @@ import { ExtendedError } from '../../utils/error/error';
 import { StatusCodes } from 'http-status-codes';
 import * as bcrypt from 'bcrypt';
 import prisma from '../../prismaClient';
-import logger from '../../config/logger';
+import {logger} from '../../config/logger';
 
 const register = async (data: User): Promise<User> => {
     let role = null;
