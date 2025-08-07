@@ -141,4 +141,6 @@ build
 tsconfig.tsbuildinfo
 vite.config.d.ts
 vite.config.js
-prisma/client/
+
+# prisma
+**/prisma/client/
