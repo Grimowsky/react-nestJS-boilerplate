@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "monorepo with react and nodeJS",
   "main": "index.js",
+  "workspaces": [
+    "client",
+    "server-express",
+    "server-nestjs"
+  ],
   "scripts": {
     "test": "npm test --workspace=client && npm test --workspace=server",
     "test:coverage": "npm test --workspace=client -- --coverage && npm test --workspace=server -- --coverage",
