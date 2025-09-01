@@ -7,19 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        component: ['server-express', 'client']
+        component: ['server-express', 'client', server-nestjs]
 
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.16.1'
+          node-version: '22.17.0'
       - name: Get npm cache directory
         id: npm-cache
         run: echo "::set-output name=dir::$(npm config get cache)"
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
