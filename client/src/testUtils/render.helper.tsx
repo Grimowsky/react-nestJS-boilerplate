@@ -1,8 +1,8 @@
 import { render, RenderResult } from '@testing-library/react';
 import { createMemoryHistory, MemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
 import userEvent from '@testing-library/user-event';
+import type { UserEvent } from '@testing-library/user-event';
 
 interface RenderWithProviders {
   renderResult: RenderResult;
