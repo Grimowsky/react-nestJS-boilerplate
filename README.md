@@ -60,6 +60,9 @@ React Node.js & Typescript JTW Authentication boilerplate.
 
 #### Backend (nestJS):
 
+TODO: add nestJS desc
+
+---
 
 
 
