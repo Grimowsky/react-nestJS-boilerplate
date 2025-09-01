@@ -8,13 +8,13 @@ React Node.js & Typescript JTW Authentication boilerplate.
 
 #### Frontend:
 
-- Tailwind CSS
 - Vite
 - Vitest
 - React Testing Library
+- React Router DOM
 
 
-#### Backend:
+#### Backend (Express):
 
 - Express
 - Typescript
@@ -26,14 +26,7 @@ React Node.js & Typescript JTW Authentication boilerplate.
 - Zod
 - Winston Logger
 
-
-
-
-
-
-
-
-### Pre-configured backend features
+##### Express Implemented Features:
 
 - Registration flow:
 
@@ -43,7 +36,7 @@ React Node.js & Typescript JTW Authentication boilerplate.
   ``` /auth/login ```
 
   ``` /auth/refresh-token ```
-####  Middlewares
+#####  Middlewares
 
 - Async middleware wrapper for controllers:
 
@@ -63,10 +56,9 @@ React Node.js & Typescript JTW Authentication boilerplate.
 
   ``` config/logger ```
 
+---
 
-
-
-
+#### Backend (nestJS):
 
 
 
