@@ -1,7 +1,7 @@
-import { HttpAdapterHost, NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { logger } from './common/logger.middleware';
-import { PrismaKnownClientExceptions } from './common/prisma-exception.filter';
+import { HttpAdapterHost, NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
+import { logger } from "./common/logger.middleware";
+import { PrismaKnownClientExceptions } from "./common/prisma-exception.filter";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

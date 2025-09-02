@@ -1,6 +1,6 @@
-import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
-import { Observable } from 'rxjs';
-import { Request } from 'express';
+import { CanActivate, ExecutionContext, Injectable } from "@nestjs/common";
+import { Observable } from "rxjs";
+import { Request } from "express";
 
 function validateRequest() {
   //this should handle validation logic
@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
   ): boolean | Promise<boolean> | Observable<boolean> {
     const request: Request = context.switchToHttp().getRequest();
 
-    console.log('@@@, auth guard request @@@', request);
+    console.log("@@@, auth guard request @@@", request);
     return validateRequest();
   }
 }
