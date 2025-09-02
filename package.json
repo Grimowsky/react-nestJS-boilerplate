@@ -1,7 +1,7 @@
 {
-  "name": "react-node-ts-monorepo",
+  "name": "react-nest-ts-monorepo",
   "version": "1.0.0",
-  "description": "monorepo with react and nodeJS",
+  "description": "reactJS boilerplate with nestJS",
   "main": "index.js",
   "workspaces": [
     "client",
@@ -12,7 +12,6 @@
     "test:coverage": "npm test --workspace=client -- --coverage && npm test --workspace=server -- --coverage",
     "test:client": "npm test --workspace=client",
     "test:server": "npm test --workspace=server",
-    "prisma:populate": "npm run prisma:populate --workspace=server",
     "compose:up": "BUILDKIT_PROGRESS=plain docker compose --env-file .env up --build --force-recreate --renew-anon-volumes --remove-orphans"
   },
   "repository": {
@@ -34,6 +33,5 @@
     "url": "https://github.com/Grimowsky/react-node-ts-monorepo/issues"
   },
   "homepage": "https://github.com/Grimowsky/react-node-ts-monorepo#readme",
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
