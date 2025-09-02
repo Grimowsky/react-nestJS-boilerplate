@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        component: ['server-express', 'client', server-nestjs]
+        component: ['client', server-nestjs]
 
     steps:
       - uses: actions/checkout@v4
