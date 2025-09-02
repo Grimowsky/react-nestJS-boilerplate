@@ -5,8 +5,7 @@
   "main": "index.js",
   "workspaces": [
     "client",
-    "server-express",
-    "server-nestjs"
+    "server",
   ],
   "scripts": {
     "test": "npm test --workspace=client && npm test --workspace=server",
