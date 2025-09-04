@@ -1,70 +1,18 @@
 [![codecov](https://codecov.io/github/Grimowsky/react-node-ts-monorepo/graph/badge.svg?token=fXoBYkKcbT)](https://codecov.io/github/Grimowsky/react-node-ts-monorepo)
 
-# React & NodeJS Typescript monorepo boilerplate
-
-React Node.js & Typescript JTW Authentication boilerplate.
+# React & NestJS Typescript monorepo boilerplate
 
 ## Tech Stack:
 
 #### Frontend:
 
-- Vite
-- Vitest
-- React Testing Library
-- React Router DOM
+- ReactJS
 
+#### Backend:
 
-#### Backend (Express):
-
-- Express
-- Typescript
-- Prisma ORM
-- Jest for unit testing
-- Docker
-- Docker Compose
-- PostgreSQL
-- Zod
-- Winston Logger
-
-##### Express Implemented Features:
-
-- Registration flow:
-
-  ``` /registration/register ```
-- Authentication flow with refresh jwt token resource:
-
-  ``` /auth/login ```
-
-  ``` /auth/refresh-token ```
-#####  Middlewares
-
-- Async middleware wrapper for controllers:
-
-  ``` asyncWrapper.ts ```
-
-- JWT middlewares:
-
-  ```jwtMiddleware.ts ```
-
-  ``` roleMiddleware.ts ```
-
-- Request validate middleware built on top of Zod:
-
-  ```  validateRequest.ts ```
-#### Logger:
-- Winston Logger:
-
-  ``` config/logger ```
+- NestJS
 
 ---
-
-#### Backend (nestJS):
-
-TODO: add nestJS desc
-
----
-
-
 
 ### Environment Variables
 
@@ -119,29 +67,3 @@ BUILDKIT_PROGRESS=plain docker compose up --build --force-recreate --renew-anon-
 ```
 
 Please see ```package.json``` for other scripts and other ways of running locally
-
-#### Seed database
-
-Command (see package.json for refference) will migrate database schema and run seed.ts script from ```/prisma/seed.ts```
-
-```bash
-npm run prisma:populate
-```
-
-#### Note:
-As docker-compose has no postgresql volumes attached, you will need to run ```prisma:populate``` script every time you kill docker compose process
-
-### Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
-To run test with code coverage report, run the following command:
-
-```bash
-  npm run test:coverage
-```
-
